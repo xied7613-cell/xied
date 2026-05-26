@@ -262,4 +262,64 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ==========================================
+    // EmailJS Contact Form Submit Handling
+    // ==========================================
+    const contactForm = document.getElementById('contact-form');
+    const btnSubmit = document.getElementById('btn-submit');
+    const btnText = btnSubmit ? btnSubmit.querySelector('.btn-text') : null;
+    const btnSpinner = btnSubmit ? btnSubmit.querySelector('.btn-spinner') : null;
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm && btnSubmit) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Disable submit button and show loading spinner
+            btnSubmit.disabled = true;
+            if (btnText) btnText.style.display = 'none';
+            if (btnSpinner) btnSpinner.style.display = 'inline-block';
+
+            // Reset status message
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+
+            // Gather template variables matching the EmailJS layout
+            const templateParams = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                title: document.getElementById('contact-title').value,
+                message: document.getElementById('contact-message').value,
+                time: new Date().toLocaleString()
+            };
+
+            // Call EmailJS to transmit the message
+            emailjs.send('service_rwuzoue', 'template_w45chca', templateParams)
+                .then((response) => {
+                    // Success!
+                    btnSubmit.disabled = false;
+                    if (btnText) btnText.style.display = 'inline-block';
+                    if (btnSpinner) btnSpinner.style.display = 'none';
+
+                    formStatus.innerHTML = '✉️ 메일이 성공적으로 전송되었습니다! 소중한 의견 감사합니다. 빠른 시일 내에 답변해 드리겠습니다. 💚';
+                    formStatus.classList.add('success');
+                    formStatus.style.display = 'block';
+
+                    // Clear form fields
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    // Fail!
+                    btnSubmit.disabled = false;
+                    if (btnText) btnText.style.display = 'inline-block';
+                    if (btnSpinner) btnSpinner.style.display = 'none';
+
+                    formStatus.innerHTML = '❌ 메일 전송에 실패했습니다. 다시 시도해 주시거나 xied7613@gmail.com으로 직접 문의해주세요.';
+                    formStatus.classList.add('error');
+                    formStatus.style.display = 'block';
+                    console.error('EmailJS transmission failed:', error);
+                });
+        });
+    }
 });
