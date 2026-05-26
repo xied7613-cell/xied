@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="때 묻지 않은 자연과 평화, 양구로의 초대. 양구군의 아름다운 관광명소와 힐링 코스를 만나보세요.">
+    <title>양구 문화관광 - 자연이 빚은 평화의 도시</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">양구문화관광<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#attractions">명소 안내</a></li>
+                <li><a href="#courses">추천 코스</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-bg" style="background-image: url('images/yanggu_hero_bg_1779164924989.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="subtitle fade-in-up">자연과 평화가 숨쉬는 곳</h2>
+            <h1 class="title fade-in-up delay-1">YANGGU<br>TOURISM</h1>
+            <p class="description fade-in-up delay-2">때 묻지 않은 청정 자연, 한반도의 중심에서 당신을 기다립니다.</p>
+            <a href="#attractions" class="btn-primary fade-in-up delay-3">여행 시작하기</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <section id="attractions" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-subtitle">Attractions</span>
+                <h2 class="section-title">주요 관광명소</h2>
+                <p class="section-desc">양구에서만 만날 수 있는 특별하고 아름다운 풍경들을 소개합니다.</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="card fade-in">
+                    <div class="card-img-wrapper">
+                        <img src="images/hanbando_island_1779164938654.png" alt="한반도섬" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>한반도섬</h3>
+                        <p>파로호 상류에 위치한 국내 최대 규모의 인공 습지로, 한반도 지형을 본뜬 아름다운 산책로와 다양한 레저 시설이 있습니다.</p>
+                        <a href="#" class="btn-text" data-modal-target="hanbando-modal">자세히 보기 &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-1">
+                    <div class="card-img-wrapper">
+                        <img src="images/dutayeon_valley_1779164962987.png" alt="두타연" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>두타연</h3>
+                        <p>금강산에서 발원한 맑은 물줄기가 흐르는 훼손되지 않은 원시림으로, 힐링 트레킹을 즐길 수 있는 생태 안보 관광지입니다.</p>
+                        <a href="#" class="btn-text" data-modal-target="dutayeon-modal">자세히 보기 &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-2">
+                    <div class="card-img-wrapper">
+                        <img src="images/parksookeun_museum_1779164975790.png" alt="박수근미술관" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>박수근미술관</h3>
+                        <p>가장 한국적이고 서민적인 화가 박수근을 기리기 위해 그의 고향 생가 터에 건립된 아름다운 군립 미술관입니다.</p>
+                        <a href="#" class="btn-text" data-modal-target="museum-modal">자세히 보기 &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="card fade-in delay-3">
+                    <div class="card-img-wrapper">
+                        <img src="images/observatory_yanggu_1779164994510.png" alt="국토정중앙천문대" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>국토정중앙천문대</h3>
+                        <p>국토의 정중앙이라는 상징성을 가진 곳으로, 80cm 대형 반사망원경을 통해 밤하늘의 별과 행성을 생생하게 관측할 수 있습니다.</p>
+                        <a href="#" class="btn-text" data-modal-target="observatory-modal">자세히 보기 &rarr;</a>
+                    </div>
+                </div>
+                
+                <div class="card fade-in delay-4">
+                    <div class="card-img-wrapper">
+                        <img src="images/kkoburang_flea_market_1779166489460.png" alt="소양강 꼬부랑길 플리마켓" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>소양강 꼬부랑길 플리마켓</h3>
+                        <p>아름다운 소양호의 풍광을 품은 굽이치는 옛길 위에서 열리는 감성적인 소규모 플리마켓 축제를 즐겨보세요.</p>
+                        <a href="#" class="btn-text" data-modal-target="kkoburang-modal">자세히 보기 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section bg-light">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-subtitle">Recommended</span>
+                <h2 class="section-title">맞춤형 추천 코스</h2>
+            </div>
+            
+            <div class="courses-wrapper">
+                <div class="course-item fade-in">
+                    <div class="course-info">
+                        <span class="tag">힐링/생태</span>
+                        <h3>청정 자연 속으로, 생태 힐링 코스</h3>
+                        <ul class="course-steps">
+                            <li><span>1</span>양구수목원</li>
+                            <li><span>2</span>생태탐방로</li>
+                            <li><span>3</span>두타연</li>
+                        </ul>
+                        <p class="course-desc">양구의 때 묻지 않은 청정 자연을 온전히 느낄 수 있는 힐링 당일치기 코스입니다. 희귀 식물들이 가득한 양구수목원을 시작으로 파로호의 아름다운 생태탐방로를 거쳐, 천혜의 비경인 민통선 내 두타연에서 몸과 마음의 평온을 찾아보세요.</p>
+                    </div>
+                </div>
+                
+                <!-- Restaurant Recommendation Banner -->
+                <div class="restaurant-banner fade-in">
+                    <div class="restaurant-content">
+                        <h3>🍽️ 금강산도 식후경! 양구 현지인 추천 맛집</h3>
+                        <p>양구재래식손두부의 두부전골부터 시원한 도촌막국수까지, 양구의 숨은 찐 맛집들을 확인해보세요.</p>
+                        <a href="https://search.naver.com/search.naver?where=blog&query=%EC%96%91%EA%B5%AC+%EB%A7%9B%EC%A7%91+%EC%B6%94%EC%B2%9C" target="_blank" class="btn-text">네이버 블로그 맛집 리뷰 보기 &rarr;</a>
+                    </div>
+                </div>
+                
+                <div class="course-item fade-in delay-1">
+                    <div class="course-info">
+                        <span class="tag">문화/역사</span>
+                        <h3>과거와 현재를 잇는, 문화 역사 코스</h3>
+                        <ul class="course-steps">
+                            <li><span>1</span>박수근미술관</li>
+                            <li><span>2</span>양구선사박물관</li>
+                            <li><span>3</span>근현대사박물관</li>
+                        </ul>
+                        <p class="course-desc">예술과 역사가 공존하는 양구의 인문학적 감성을 채우는 코스입니다. 한국 근현대 미술의 거장 박수근 화백의 발자취를 따라가 보고, 구석기부터 근현대까지 이어지는 양구의 깊은 역사를 한눈에 살펴볼 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>양구문화관광</h2>
+                <p>자연이 빚은 평화의 도시, 양구</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>고객센터</h4>
+                    <p>전화: 033-480-2114</p>
+                    <p>주소: 강원특별자치도 양구군 양구읍 관공서로 38</p>
+                </div>
+                <div>
+                    <h4>관련 사이트</h4>
+                    <ul>
+                        <li><a href="#">양구군청</a></li>
+                        <li><a href="#">숙박 안내</a></li>
+                        <li><a href="#">교통 정보</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yanggu-gun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="hanbando-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2>한반도섬 상세 안내</h2>
+                <img src="images/hanbando_island_1779164938654.png" alt="한반도섬 전경" class="modal-img">
+                <p>양구읍 파로호 상류에 위치한 국내 최대 규모의 인공 습지로, 국토의 정중앙이라는 상징성을 담아 한반도 모양으로 조성되었습니다.</p>
+                <p>백두산, 한라산, 독도 등 한반도의 지형을 본뜬 모형들이 섬 내부에 전시되어 있으며, 아름다운 데크 산책로와 함께 짚라인, 태양광 보트 등 수상 레저도 즐길 수 있습니다.</p>
+                <ul class="modal-info-list">
+                    <li><strong>운영시간:</strong> 상시 개방 (일부 시설 제외)</li>
+                    <li><strong>입장료:</strong> 무료 (체험 시설은 별도)</li>
+                    <li><strong>위치:</strong> 강원특별자치도 양구군 양구읍 한반도섬길 76</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 두타연 Modal -->
+    <div id="dutayeon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2>두타연 상세 안내</h2>
+                <img src="images/dutayeon_valley_1779164962987.png" alt="두타연 전경" class="modal-img">
+                <p>금강산에서 발원한 맑은 물줄기가 빚어낸 아름다운 폭포와 계곡으로, 멸종위기종인 천연기념물 열목어의 국내 최대 서식지이기도 합니다.</p>
+                <p>민간인통제구역(민통선) 내에 위치하여 반세기 동안 오염되지 않은 원시 자연을 감상하며 힐링 트레킹을 즐길 수 있는 최고의 생태 안보 관광지입니다.</p>
+                <ul class="modal-info-list">
+                    <li><strong>운영시간:</strong> 하절기 09:00~17:00 / 동절기 09:00~16:00 (월요일 휴무)</li>
+                    <li><strong>입장료:</strong> 대인 6,000원 (사전예약 또는 당일 현장 신청 필수)</li>
+                    <li><strong>위치:</strong> 강원특별자치도 양구군 방산면 두타연로 297</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 박수근미술관 Modal -->
+    <div id="museum-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2>박수근미술관 상세 안내</h2>
+                <img src="images/parksookeun_museum_1779164975790.png" alt="박수근미술관 전경" class="modal-img">
+                <p>가장 한국적이고 서민적인 화가로 사랑받는 박수근 화백을 기리기 위해 2002년 그의 고향인 양구 생가 터에 건립된 군립 미술관입니다.</p>
+                <p>박수근 기념 전시관, 현대미술관, 파빌리온 등 다양한 전시 시설을 갖추고 있으며, '이건희 컬렉션'을 포함한 소중한 원화 작품들을 감상할 수 있습니다.</p>
+                <ul class="modal-info-list">
+                    <li><strong>운영시간:</strong> 09:00~18:00 (매주 월요일 휴관)</li>
+                    <li><strong>입장료:</strong> 성인 3,000원 / 학생 2,000원</li>
+                    <li><strong>위치:</strong> 강원특별자치도 양구군 양구읍 박수근로 265-15</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 국토정중앙천문대 Modal -->
+    <div id="observatory-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2>국토정중앙천문대 상세 안내</h2>
+                <img src="images/observatory_yanggu_1779164994510.png" alt="국토정중앙천문대 전경" class="modal-img">
+                <p>우리나라 국토의 정중앙(동경 128° 02′ 02.5″, 북위 38° 03′ 37.5″)이라는 지리적 상징성을 가진 양구에 위치한 전문 천문대입니다.</p>
+                <p>80cm 대형 반사망원경을 통해 밤하늘의 별과 행성을 생생하게 관측할 수 있으며, 디지털 천체투영실과 별빛 아래서 캠핑을 즐길 수 있는 야영장도 운영합니다.</p>
+                <ul class="modal-info-list">
+                    <li><strong>운영시간:</strong> 15:00~23:00 (매주 월요일 휴관)</li>
+                    <li><strong>입장료:</strong> 성인 2,000원 / 청소년 1,000원</li>
+                    <li><strong>위치:</strong> 강원특별자치도 양구군 국토정중앙면 국토정중앙로 127</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 꼬부랑길 Modal -->
+    <div id="kkoburang-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <h2>소양강 꼬부랑길 플리마켓 안내</h2>
+                <img src="images/kkoburang_flea_market_1779166489460.png" alt="소양강 꼬부랑길 플리마켓 전경" class="modal-img">
+                <p>과거 춘천과 양구를 잇던 유일한 옛길인 '소양강 꼬부랑길'은 수려한 소양호의 절경을 감상할 수 있는 명품 드라이브 코스입니다.</p>
+                <p>가을 단풍과 푸른 호수를 배경으로 열리는 작고 감성적인 플리마켓 축제에서는 지역 특산품, 아기자기한 수공예품, 맛있는 먹거리 등을 만나볼 수 있습니다.</p>
+                <ul class="modal-info-list">
+                    <li><strong>행사일정:</strong> 봄/가을 특정 주말 (양구군청 홈페이지 참고)</li>
+                    <li><strong>입장료:</strong> 무료</li>
+                    <li><strong>위치:</strong> 강원특별자치도 양구군 양구읍 소양강 꼬부랑길 일대</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
