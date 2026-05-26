@@ -109,6 +109,34 @@
         </div>
     </section>
 
+    <!-- Mascot Welcome Section -->
+    <section id="mascot-section" class="section mascot-intro-section">
+        <div class="container">
+            <div class="mascot-flex-container">
+                <div class="mascot-img-box fade-in">
+                    <div class="mascot-img-glow"></div>
+                    <img src="images/gomchwi_character.png" alt="양구 곰취 캐릭터 고미" class="mascot-intro-img">
+                </div>
+                <div class="mascot-text-box fade-in delay-1">
+                    <span class="section-subtitle">Yanggu Mascot</span>
+                    <h2 class="section-title">안녕! 난 곰취 마스코트 '고미'야 🐻💚</h2>
+                    <p class="mascot-desc">
+                        양구의 맑은 바람과 깨끗한 이슬을 먹고 자란 귀여운 아기 곰 <strong>'고미'</strong>를 소개합니다! <br>
+                        머리에 곰의 발바닥을 닮고 사랑스러운 하트 모양을 한 <strong>양구 명품 곰취 잎</strong>을 쏙 뒤집어쓰고 있어요. 
+                    </p>
+                    <p class="mascot-desc">
+                        양구의 때 묻지 않은 청정 자연을 사랑하고, 여행자들에게 아름다운 비경을 소개해 주는 것이 고미의 취미랍니다. 양구 여행 중에 고미를 만나면 반갑게 인사해주세요!
+                    </p>
+                    <div class="mascot-features">
+                        <div class="feature-badge">🌲 청정 자연 지킴이</div>
+                        <div class="feature-badge">💚 하트 곰취 잎 모자</div>
+                        <div class="feature-badge">🗺️ 양구 여행 전문 가이드</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="courses" class="section bg-light">
         <div class="container">
             <div class="section-header fade-in">
@@ -268,6 +296,54 @@
                     <li><strong>입장료:</strong> 무료</li>
                     <li><strong>위치:</strong> 강원특별자치도 양구군 양구읍 소양강 꼬부랑길 일대</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Mascot Widget -->
+    <div id="floating-mascot-container">
+        <!-- Floating Speech Bubble -->
+        <div class="mascot-bubble" id="mascot-bubble">
+            <span class="bubble-text">안녕! 난 고미야 🐻💚<br>양구 여행 팁을 줄까?</span>
+            <div class="bubble-arrow"></div>
+        </div>
+        <!-- Mascot Avatar -->
+        <div class="mascot-avatar" id="mascot-avatar">
+            <img src="images/gomchwi_character.png" alt="고미 플로팅">
+            <span class="pulse-ring"></span>
+        </div>
+    </div>
+
+    <!-- Mascot Guide Modal -->
+    <div id="gomi-guide-modal" class="modal">
+        <div class="modal-content gomi-modal-content">
+            <span class="close-btn" id="gomi-modal-close">&times;</span>
+            <div class="gomi-modal-header">
+                <div class="gomi-profile-wrap">
+                    <img src="images/gomchwi_character.png" alt="고미 프로필" class="gomi-profile-img">
+                </div>
+                <div class="gomi-title-wrap">
+                    <h3>고미의 상큼한 양구 가이드 🗺️</h3>
+                    <p>“양구 곰취처럼 싱그럽고 재미있는 정보를 알려줄게!”</p>
+                </div>
+            </div>
+            <div class="gomi-modal-body">
+                <div class="gomi-bubble-display">
+                    <p id="gomi-display-text">반가워! 내 모자는 곰발바닥 모양을 닮은 하트 곰취 잎이야. 궁금한 게 있다면 아래 버튼을 눌러봐! 🐻💚</p>
+                </div>
+                <div class="gomi-action-grid">
+                    <button class="gomi-btn" id="gomi-btn-recommend">
+                        <span class="icon">🎲</span>
+                        <span class="text">양구 여행지 랜덤 추천</span>
+                    </button>
+                    <button class="gomi-btn" id="gomi-btn-tmi">
+                        <span class="icon">💚</span>
+                        <span class="text">곰취 & 양구 재밌는 상식</span>
+                    </button>
+                </div>
+                <div id="gomi-recommend-result" class="recommend-result-box" style="display: none;">
+                    <!-- Recommended attraction will render here -->
+                </div>
             </div>
         </div>
     </div>
