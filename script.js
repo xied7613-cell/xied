@@ -322,4 +322,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    // ==========================================
+    // Educational Notice Modal Load Trigger
+    // ==========================================
+    const noticeModal = document.getElementById('notice-modal');
+    const btnNoticeClose = document.getElementById('btn-notice-close');
+
+    if (noticeModal && btnNoticeClose) {
+        // Show educational warning popup instantly on load (바로 볼 수 있게)
+        noticeModal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Lock scrolling
+
+        btnNoticeClose.addEventListener('click', () => {
+            noticeModal.classList.remove('show');
+            document.body.style.overflow = ''; // Unlock scrolling
+        });
+    }
 });
