@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Intersection Observer for Fade-In Animations
     const fadeElements = document.querySelectorAll('.fade-in');
-    
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-            if(targetElement) {
+            if (targetElement) {
                 // Adjust for fixed navbar height
                 const navHeight = navbar.offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gomiModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
                 if (mascotBubble) mascotBubble.classList.remove('show');
-                
+
                 // Set initial welcoming text
                 gomiDisplayText.innerHTML = "안녕! 난 곰취 모자를 쓴 <strong>고미(Gomi)</strong>야! 🐻💚<br>깨끗한 양구에 온 걸 온몸으로 환영해! 궁금한 게 있다면 아래 버튼을 눌러줘!";
                 gomiRecResult.style.display = 'none';
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             do {
                 randIndex = Math.floor(Math.random() * gomiTmiFacts.length);
             } while (randIndex === lastTmiIndex);
-            
+
             lastTmiIndex = randIndex;
             gomiDisplayText.style.opacity = 0.5;
             setTimeout(() => {
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Display recommendation result
             gomiDisplayText.innerHTML = `🎲 고미가 엄선한 오늘의 양구 명소는... <strong>[${dest.name}]</strong>이야! 정말 멋진 곳이지!`;
-            
+
             gomiRecResult.innerHTML = `
                 <div class="rec-card-header">${dest.tag}</div>
                 <div class="rec-card-title">${dest.name}</div>
@@ -241,12 +241,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Find all cards
                     const cards = document.querySelectorAll('.grid-container .card');
                     const targetCard = cards[dest.cardIndex];
-                    
+
                     if (targetCard) {
                         // Scroll to target card smoothly
                         const navHeight = navbar.offsetHeight;
                         const targetPosition = targetCard.getBoundingClientRect().top + window.scrollY - navHeight - 40;
-                        
+
                         window.scrollTo({
                             top: targetPosition,
                             behavior: 'smooth'
