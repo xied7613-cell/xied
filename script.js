@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (btnText) btnText.style.display = 'inline-block';
                     if (btnSpinner) btnSpinner.style.display = 'none';
 
-                    formStatus.innerHTML = '❌ 메일 전송에 실패했습니다. 다시 시도해 주시거나 xied7613@gmail.com으로 직접 문의해주세요.';
+                    formStatus.innerHTML = '❌ 메일 전송에 실패했습니다. 네트워크 상태를 확인하시고 다시 시도해 주세요.';
                     formStatus.classList.add('error');
                     formStatus.style.display = 'block';
                     console.error('EmailJS transmission failed:', error);
